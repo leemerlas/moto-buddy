@@ -1,0 +1,4 @@
+{
+    "CONNECTION_URL": "mongodb://localhost:27017/motobuddy",
+    "SERVER_PORT": 5000
+}
