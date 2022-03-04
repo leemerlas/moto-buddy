@@ -7,6 +7,8 @@ const configData = JSON.parse(await readFile(new URL('./configs.json', import.me
 
 import userRoutes from './routes/api/users.js';
 import noteRoutes from './routes/api/notes.js';
+import authRoutes from './routes/api/auth.js';
+import extraRoutes from './routes/api/extras.js'
 
 
 const app = express();
@@ -18,6 +20,8 @@ app.use(cors());
 
 app.use('/api/v1/users', userRoutes); //done
 app.use('/api/v1/notes', noteRoutes); //done
+app.use('/api/v1/auth', authRoutes); //done
+app.use('/api/v1/extras', extraRoutes); //done
 
 
 app.get('/test', function (req, res) {

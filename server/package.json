@@ -18,11 +18,14 @@
     "express": "^4.17.3",
     "express-validator": "^6.14.0",
     "file-system": "^2.2.2",
+    "htmlparser2": "^7.2.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "moment": "^2.29.1",
     "mongoose": "^6.2.4",
+    "node-fetch": "^3.2.1",
     "nodemon": "^2.0.15",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "xpath-html": "^1.0.2"
   }
 }

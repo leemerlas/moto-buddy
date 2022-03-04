@@ -1,6 +1,12 @@
 import mongoose from 'mongoose';
+const Schema = mongoose.Schema;
 
-const NoteSchema = new mongoose.Schema({
+const NoteSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'users'
+    },
     title: {
         type: String,
         required: true,
@@ -11,17 +17,9 @@ const NoteSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    dueDate: {
-        type: Date,
-        trim: true
-    },
     isImportant: {
         type: Boolean,
         default: false
-    },
-    subTasks: {
-        type: Array,
-        default: []
     },
     isRemoved: {
         type: Boolean,
