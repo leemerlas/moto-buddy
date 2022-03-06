@@ -1,13 +1,11 @@
 import { useState, useLayoutEffect } from 'react';
 
-import { ListSubheader, List, Grid, Typography } from '@mui/material';
+import { ListSubheader, List, Grid, Typography, Card } from '@mui/material';
 import { useLocation, matchPath } from 'react-router-dom';
 import SidebarMenuItem from './item';
 import menuItems, { MenuItem } from './items';
 import { styled } from '@mui/material/styles';
 import configData from '../../../../utils/configData.json'
-import Footer from 'src/components/Footer';
-import Text from 'src/components/Text';
 
 const MenuWrapper = styled(List)(
   ({ theme }) => `
@@ -217,6 +215,7 @@ function SidebarMenu() {
 
 
   useLayoutEffect(() => {
+    // getSpotifyToken();
     getGasPrice();
   }, []);
 
@@ -234,19 +233,22 @@ function SidebarMenu() {
             path: location.pathname
           })}
 
-        <Grid container spacing={0}
-          direction="column"
-          alignItems="center"
-          justifyContent="space-between">
-          <Grid item xs={12}>
-            <Typography color='black' variant='h3' component='h3'>
-              Current Gas Price:
-            </Typography>
-            <Typography color='primary' variant='h1' component='h1' style={{ fontSize: '3.5em' }}>
-              &#8369;{gasPrice}
-            </Typography>
+          <Grid container spacing={0}
+            style={{ position: 'absolute', top: window.innerHeight - 260 }}
+            direction="column"
+            alignItems="center"
+            justifyContent="space-between">
+            <Card sx={{ pr: 3, pl: 3, pt: 3, pb: 3, mb: 3 }} style={{ backgroundColor: '#F2F5F9'}}>
+              <Grid item xs={12}>
+                <Typography color='black' variant='h3' component='h3'>
+                  Average Gas Price:
+                </Typography>
+                <Typography color='primary' variant='h1' component='h1' style={{ fontSize: '3.5em' }}>
+                  &#8369;{gasPrice}
+                </Typography>
+              </Grid>
+            </Card>
           </Grid>
-        </Grid>
 
         </MenuWrapper>
       ))}

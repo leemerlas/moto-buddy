@@ -1,3 +1,6 @@
 {
-    "SERVER_URL": "http://localhost:5000"
+    "SERVER_URL": "http://localhost:5000",
+    "SPOTIFY_CLIENT": "de8e34ed54374dd1b9ee4431ecef9d58",
+    "SPOTIFY_SECRET": "4c84755be0c64b3982cc1cd054444ee6",
+    "REDIRECT_URI": "http://localhost:3000/dashboard/diary"
 }

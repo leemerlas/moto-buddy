@@ -24,7 +24,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const [showError, setShowError] = useState(false);
   const [error, setError] = useState("");
-  const [helperText, setHelperText] = useState("");
+  // const [helperText, setHelperText] = useState("");
 
   const handleRegister = () => {
 
@@ -59,7 +59,7 @@ function Register() {
         if (data.token) {
           console.log(data);
           localStorage.setItem('token', data.token);
-          navigate('/dashboard/notes');
+          navigate('/dashboard/diary');
         } else {
           setShowError(true)
           setError(data.errors[0].msg);

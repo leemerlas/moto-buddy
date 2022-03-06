@@ -12,7 +12,17 @@ const NoteSchema = new Schema({
         required: true,
         trim: true
     },
+    subtitle: {
+        type: String,
+        required: true,
+        trim: true
+    },
     description: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    destination: {
         type: String,
         required: true,
         trim: true

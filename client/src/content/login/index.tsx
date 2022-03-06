@@ -17,7 +17,7 @@ const OverviewWrapper = styled(Box)(
 );
 
 
-function Overview() {
+function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -46,7 +46,7 @@ function Overview() {
       .then(data => {
         if (data.token) {
           localStorage.setItem('token', data.token);
-          navigate('/dashboard/notes');
+          navigate('/dashboard/diary');
         } else {
           setShowError(true)
           setError(data.errors[0].msg);
@@ -83,6 +83,7 @@ function Overview() {
               justifyContent="center">
               <Grid item xs={12}>
                 <TextField
+                  autoFocus
                   id="outlined-required"
                   label="Username"
                   placeholder="harleydavidson@gmail.com"
@@ -138,4 +139,4 @@ function Overview() {
   );
 }
 
-export default Overview;
+export default Login;

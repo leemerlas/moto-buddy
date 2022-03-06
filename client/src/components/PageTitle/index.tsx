@@ -7,6 +7,7 @@ interface PageTitleProps {
     heading?: string;
     subHeading?: string;
     docs?: string;
+    data?: any;
 }
 
 const PageTitle: FC<PageTitleProps> = ({
@@ -24,15 +25,6 @@ const PageTitle: FC<PageTitleProps> = ({
                 <Typography variant="subtitle2">
                     {subHeading}
                 </Typography>
-            </Grid>
-            <Grid item>
-                <Button
-                    sx={{ mt: { xs: 2, md: 0 } }}
-                    variant="contained"
-                    startIcon={<AddTwoToneIcon fontSize="small" />}
-                >
-                    Add Entry
-                </Button>
             </Grid>
         </Grid>
     );

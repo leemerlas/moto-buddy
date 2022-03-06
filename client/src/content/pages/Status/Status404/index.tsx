@@ -3,14 +3,9 @@ import {
   Card,
   Typography,
   Container,
-  Divider,
   Button,
-  FormControl,
-  OutlinedInput,
-  InputAdornment
 } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
-import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 
 import { styled } from '@mui/material/styles';
 
@@ -26,17 +21,17 @@ const MainContent = styled(Box)(
 `
 );
 
-const OutlinedInputWrapper = styled(OutlinedInput)(
-  ({ theme }) => `
-    background-color: ${theme.colors.alpha.white[100]};
-`
-);
+// const OutlinedInputWrapper = styled(OutlinedInput)(
+//   ({ theme }) => `
+//     background-color: ${theme.colors.alpha.white[100]};
+// `
+// );
 
-const ButtonSearch = styled(Button)(
-  ({ theme }) => `
-    margin-right: -${theme.spacing(1)};
-`
-);
+// const ButtonSearch = styled(Button)(
+//   ({ theme }) => `
+//     margin-right: -${theme.spacing(1)};
+// `
+// );
 
 function Status404() {
 
@@ -82,7 +77,7 @@ function Status404() {
                 />
               </FormControl>
               <Divider sx={{ my: 4 }}>OR</Divider> */}
-              <Button href="/dashboard/notes" variant="outlined">
+              <Button href="/dashboard/diary" variant="outlined">
                 Go to homepage
               </Button>
             </Card>

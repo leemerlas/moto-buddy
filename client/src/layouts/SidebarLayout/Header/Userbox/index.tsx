@@ -7,7 +7,6 @@ import {
   Box,
   Button,
   Divider,
-  Hidden,
   lighten,
   List,
   ListItem,
@@ -18,17 +17,16 @@ import {
 
 import InboxTwoToneIcon from '@mui/icons-material/InboxTwoTone';
 import { styled } from '@mui/material/styles';
-import ExpandMoreTwoToneIcon from '@mui/icons-material/ExpandMoreTwoTone';
 import AccountBoxTwoToneIcon from '@mui/icons-material/AccountBoxTwoTone';
 import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
 import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
 
-const UserBoxButton = styled(Button)(
-  ({ theme }) => `
-        padding-left: ${theme.spacing(1)};
-        padding-right: ${theme.spacing(1)};
-`
-);
+// const UserBoxButton = styled(Button)(
+//   ({ theme }) => `
+//         padding-left: ${theme.spacing(1)};
+//         padding-right: ${theme.spacing(1)};
+// `
+// );
 
 const MenuUserBox = styled(Box)(
   ({ theme }) => `
@@ -70,9 +68,9 @@ function HeaderUserbox() {
   const ref = useRef<any>(null);
   const [isOpen, setOpen] = useState<boolean>(false);
 
-  const handleOpen = (): void => {
-    setOpen(true);
-  };
+  // const handleOpen = (): void => {
+  //   setOpen(true);
+  // };
 
   const handleClose = (): void => {
     setOpen(false);

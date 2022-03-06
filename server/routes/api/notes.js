@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/', auth, async(req, res) => {
     try {
-        let notes = await Note.find({ isRemoved: false })
+        let notes = await Note.find({ user: req.user.id, isRemoved: false }).sort({ createdAt: -1 })
         res.json(notes)
 
     } catch (error) {
@@ -20,30 +20,38 @@ router.get('/', auth, async(req, res) => {
 
 router.post('/', auth, async(req, res) => {
     try {
-        const { title, description } = req.body;
+        const { title, subtitle, description, destination } = req.body;
 
         let note = new Note({
             user: req.user.id,
             title,
+            subtitle,
             description,
+            destination
         })
 
         let newNote = await note.save();
         res.json(newNote)
 
     } catch (error) {
-        
+        console.error(error);
+        res.status(500).json({
+            message: "Server error",
+            error: error
+        })
     }
 })
 
 router.put('/', auth, async(req, res) => {
     try {
-        const { noteId, title, description, isImportant } = req.body;
+        const { noteId, title, subtitle, description, destination, isImportant } = req.body;
 
         let note = await Note.findByIdAndUpdate(noteId, {
             title,
+            subtitle,
             description,
-            isImportant
+            isImportant,
+            destination
         }, {new: true})
 
         res.json(note)
