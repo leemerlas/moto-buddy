@@ -109,7 +109,9 @@ function Logo() {
       </LogoSignWrapper> */}
       <Hidden smDown>
         <LogoTextWrapper>
-          <LogoText>Moto Buddy</LogoText>
+          <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginLeft: "5%"}}>
+            <img src="/static/images/logo/moto_buddy.svg" alt="MB Logo" width={200}/>      
+          </div> 
         </LogoTextWrapper>
       </Hidden>
     </LogoWrapper>

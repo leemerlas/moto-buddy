@@ -382,12 +382,12 @@ function Notes() {
                             
                             <div style={{ position: "relative" }}>
                               <CardMedia
-                                sx={{ height: 200 }}
+                                sx={{ height: 220 }}
                                 image={ news['urlToImage'] }
                                 style = {{ filter: "brightness(50%)" }}
                               />
-                              <div style={{position: "absolute", color: "white",top: "70%",left: "2%"}}>
-                                <Typography variant="body1" color="#F2F5F9" style={{ fontSize: '2em', fontWeight: 'bold', textShadow: '12, 12, 12', cursor: 'pointer' }} 
+                              <div style={{position: "absolute", color: "white",top: "75%",left: "2%"}}>
+                                <Typography variant="body1" color="#F2F5F9" style={{ fontSize: '1.8em', fontWeight: 'bold', textShadow: '12, 12, 12', cursor: 'pointer' }} 
                                   onClick={() => openNews(news['url'])}>
                                   <b>{news['title']}</b>
                                 </Typography>
